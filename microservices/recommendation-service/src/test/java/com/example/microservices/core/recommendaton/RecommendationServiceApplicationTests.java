@@ -1,4 +1,4 @@
-package com.example.recommendation_service;
+package com.example.microservices.core.recommendaton;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

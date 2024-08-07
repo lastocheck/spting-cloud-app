@@ -1,4 +1,4 @@
-package com.example.review_service;
+package com.example.microservices.core.review;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

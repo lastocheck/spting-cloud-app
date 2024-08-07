@@ -1,9 +1,11 @@
-package com.example.recommendation_service;
+package com.example.microservices.core.recommendaton;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan("com.example")
 public class RecommendationServiceApplication {
 
 	public static void main(String[] args) {
