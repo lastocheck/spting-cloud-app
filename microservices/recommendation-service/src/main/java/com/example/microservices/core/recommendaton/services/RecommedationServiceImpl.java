@@ -42,5 +42,10 @@ public class RecommedationServiceImpl implements RecommendationService {
         LOG.debug("/recommendation return the found recommendations of size {} for productId={}", recommendations.size(), productId);
 
         return recommendations;
+
+
     }
+
+
+
 }
