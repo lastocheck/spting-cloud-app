@@ -1,0 +1,73 @@
+[33mcommit 6e71efa90b73068c83718d942ff89de44ca72e9c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: lastocheck <lastocheck@gmail.com>
+Date:   Fri Aug 9 21:08:26 2024 +0300
+
+    Add Dockerfiles and profiles for docker in properties for microservices, add test bash script
+
+[33mcommit 05e32f9489caef08091df2682e6a81360b4dfabc[m
+Author: lastocheck <lastocheck@gmail.com>
+Date:   Fri Aug 9 18:20:10 2024 +0300
+
+    Add fixes for tests
+
+[33mcommit c20c117c5bbbbc0c6eb216327a1b0907c25a5dfa[m
+Author: lastocheck <lastocheck@gmail.com>
+Date:   Fri Aug 9 17:55:31 2024 +0300
+
+    Add tests for microservices
+
+[33mcommit 663174404cca7aee98a2abe9b9319f34428377ba[m
+Author: lastocheck <lastocheck@gmail.com>
+Date:   Fri Aug 9 14:12:07 2024 +0300
+
+    Fix log messages for review and recommendation services, add missing annotation to global exception handler
+
+[33mcommit 44c0baccaee9fa06180e54f5af18512f1261e157[m
+Author: lastocheck <lastocheck@gmail.com>
+Date:   Fri Aug 9 13:58:24 2024 +0300
+
+    Fix incorrect log level in composite service properties, add execution goals for correct build process
+
+[33mcommit 4aa479996849f36f827f5b1a75287b5f83eecbfd[m
+Author: lastocheck <lastocheck@gmail.com>
+Date:   Fri Aug 9 13:20:11 2024 +0300
+
+    Add implementation for ProductCompositeService
+
+[33mcommit aa2ed0a67eddaa13ea01e42f2a065d66ffd7c263[m
+Author: lastocheck <lastocheck@gmail.com>
+Date:   Thu Aug 8 21:20:09 2024 +0300
+
+    Add integration class for product-composite-service
+    
+    Add integration class with methods to fetch base product, recommendation and review services
+
+[33mcommit e9809366947d1b2ddc2cbfd68e29e20444ea3cb0[m
+Author: lastocheck <lastocheck@gmail.com>
+Date:   Wed Aug 7 22:02:40 2024 +0300
+
+    Add implementation for ProductComposite service
+
+[33mcommit 34068835f1275c7cddda0a3cc3127f1ca9a4cbaf[m
+Author: lastocheck <lastocheck@gmail.com>
+Date:   Wed Aug 7 21:38:57 2024 +0300
+
+    Add implementation for Review service
+
+[33mcommit bb0c1fc88a676a90ff1f46ab76d031538f0c2c8c[m
+Author: lastocheck <lastocheck@gmail.com>
+Date:   Wed Aug 7 21:19:08 2024 +0300
+
+    Add implementation for Recommendation service
+
+[33mcommit 850e2ce01591115d86b8d4c664f44a8501ecdd60[m
+Author: lastocheck <lastocheck@gmail.com>
+Date:   Wed Aug 7 20:44:21 2024 +0300
+
+    Add util and api packages, create impl for ProductService
+
+[33mcommit 47697d6333f78eafb0a3241bf052541b8cf6db58[m
+Author: lastocheck <lastocheck@gmail.com>
+Date:   Wed Aug 7 17:40:17 2024 +0300
+
+    Initial setup
