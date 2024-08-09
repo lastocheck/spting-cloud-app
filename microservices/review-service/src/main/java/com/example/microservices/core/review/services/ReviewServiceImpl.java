@@ -25,7 +25,7 @@ public class ReviewServiceImpl implements ReviewService {
         LOG.debug("/review call to return found reviews for productId={}", productId);
 
         if (productId < 1) {
-            throw new InvalidInputException("Invalid productId: + productId");
+            throw new InvalidInputException("Invalid productId: " + productId);
         }
 
         if (productId == 229) {
