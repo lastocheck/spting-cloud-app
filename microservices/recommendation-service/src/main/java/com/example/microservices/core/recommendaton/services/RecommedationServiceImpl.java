@@ -22,13 +22,13 @@ public class RecommedationServiceImpl implements RecommendationService {
 
     @Override
     public List<Recommendation> getRecommendations(int productId) {
-        LOG.debug("/recommendation return found recommendations for productId={}", productId);
+        LOG.debug("/recommendation call to return found recommendations for productId={}", productId);
 
         if (productId < 1) {
             throw new InvalidInputException("Invalid productId: + productId");
         }
 
-        if (productId == 228) {
+        if (productId == 230) {
             LOG.debug("No recommendations found for productId: {}", productId);
             return new ArrayList<>();
         }
@@ -39,7 +39,7 @@ public class RecommedationServiceImpl implements RecommendationService {
                 new Recommendation(productId, 3, "Author 3", 3, "Content 3", serviceUtil.getServiceAddress())
         );
 
-        LOG.debug("/recommendations return the found recommendations of size {} for productId={}", recommendations.size(), productId);
+        LOG.debug("/recommendation return the found recommendations of size {} for productId={}", recommendations.size(), productId);
 
         return recommendations;
     }

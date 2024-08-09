@@ -22,13 +22,13 @@ public class ReviewServiceImpl implements ReviewService {
 
     @Override
     public List<Review> getReviews(int productId) {
-        LOG.debug("/review return found reviews for productId={}", productId);
+        LOG.debug("/review call to return found reviews for productId={}", productId);
 
         if (productId < 1) {
             throw new InvalidInputException("Invalid productId: + productId");
         }
 
-        if (productId == 228) {
+        if (productId == 229) {
             LOG.debug("No reviews found for productId: {}", productId);
             return new ArrayList<>();
         }
@@ -39,7 +39,7 @@ public class ReviewServiceImpl implements ReviewService {
                 new Review(productId, 3, "Author 3", "Subject 3", "Content 3", serviceUtil.getServiceAddress())
         );
 
-        LOG.debug("/recommendations return the found recommendations of size {} for productId={}", reviews.size(), productId);
+        LOG.debug("/review return the found reviews of size {} for productId={}", reviews.size(), productId);
 
         return reviews;
 

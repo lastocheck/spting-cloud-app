@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import com.example.api.exceptions.NotFoundException;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+@RestControllerAdvice
 public class GlobalControllerExceptionHandler {
 
     private static final Logger LOG = LoggerFactory.getLogger(GlobalControllerExceptionHandler.class);
