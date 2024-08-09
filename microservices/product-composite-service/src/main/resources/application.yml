@@ -42,16 +42,16 @@ api:
         # Expected partial and error responses
         In the following cases, only a partial response be created (used to simplify testing of error conditions)
 
-        ## Product id 113
+        ## Product id 230
         200 - Ok, but no recommendations will be returned
 
-        ## Product id 213
+        ## Product id 229
         200 - Ok, but no reviews will be returned
 
         ## Non numerical product id
         400 - A **Bad Request** error will be returned
 
-        ## Product id 13
+        ## Product id 228
         404 - A **Not Found** error will be returned
 
         ## Negative product ids
