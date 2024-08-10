@@ -6,12 +6,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.Value;
 
-@Value
+@Data
 @NoArgsConstructor(force = true)
 @AllArgsConstructor
 public class Product {
-    int productId;
-    String name;
-    int weight;
-    String serviceAddress;
+    private int productId;
+    private String name;
+    private int weight;
+    private String serviceAddress;
 }
