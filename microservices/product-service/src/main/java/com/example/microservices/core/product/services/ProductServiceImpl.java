@@ -7,9 +7,9 @@ import com.example.api.exceptions.NotFoundException;
 import com.example.microservices.core.product.persistence.ProductEntity;
 import com.example.microservices.core.product.persistence.ProductRepository;
 import com.example.util.http.ServiceUtil;
-import com.mongodb.DuplicateKeyException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController

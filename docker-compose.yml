@@ -4,23 +4,59 @@ services:
     mem_limit: 512m
     environment:
       - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      mongodb:
+        condition: service_healthy
 
   recommendation:
     build: microservices/recommendation-service
     mem_limit: 512m
     environment:
       - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      mongodb:
+        condition: service_healthy
 
   review:
     build: microservices/review-service
     mem_limit: 512m
     environment:
       - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      postgres:
+        condition: service_healthy
 
   product-composite:
     build: microservices/product-composite-service
     mem_limit: 512m
     ports:
-      - "8080:8080"
+      - 8080:8080
     environment:
       - SPRING_PROFILES_ACTIVE=docker
+
+  mongodb:
+    image: mongo:6.0.4
+    mem_limit: 512m
+    ports:
+      - 27017:27017
+    command: mongod
+    healthcheck:
+      test: "mongo --eval 'db.stats().ok'"
+      interval: 5s
+      timeout: 2s
+      retries: 60
+
+  postgres:
+    image: postgres:16-alpine
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=pwd
+      - POSTGRES_USER=user
+      - POSTGRES_DB=review-db
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready", "-d", "db_prod" ]
+      interval: 30s
+      timeout: 60s
+      retries: 5
+      start_period: 80s

@@ -6,7 +6,7 @@ import com.example.api.exceptions.InvalidInputException;
 import com.example.microservices.core.recommendaton.persistence.RecommendationEntity;
 import com.example.microservices.core.recommendaton.persistence.RecommendationRepository;
 import com.example.util.http.ServiceUtil;
-import com.mongodb.DuplicateKeyException;
+import org.springframework.dao.DuplicateKeyException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RestController;
