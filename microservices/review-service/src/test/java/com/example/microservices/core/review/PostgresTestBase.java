@@ -5,7 +5,7 @@ import org.springframework.test.context.DynamicPropertySource;
 import org.testcontainers.containers.JdbcDatabaseContainer;
 import org.testcontainers.containers.PostgreSQLContainer;
 
-public class MySqlTestBase {
+public class PostgresTestBase {
     private static JdbcDatabaseContainer database = new PostgreSQLContainer("postgres:16").withStartupTimeoutSeconds(300);
 
     static {
