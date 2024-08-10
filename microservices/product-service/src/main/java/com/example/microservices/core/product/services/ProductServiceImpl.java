@@ -47,10 +47,10 @@ public class ProductServiceImpl implements ProductService {
         LOG.debug("createProduct: try to create product for productId: {}", body.getProductId());
         try {
             ProductEntity entity = mapper.apiToEntity(body);
-            repository.save(entity);
+            ProductEntity newEntity = repository.save(entity);
             LOG.debug("createProduct: entity created for productId: {}", body.getProductId());
 
-            return mapper.entityToApi(entity);
+            return mapper.entityToApi(newEntity);
         } catch (DuplicateKeyException dke) {
             throw new InvalidInputException("Duplicate key, Product Id: \" + body.getProductId()");
         }

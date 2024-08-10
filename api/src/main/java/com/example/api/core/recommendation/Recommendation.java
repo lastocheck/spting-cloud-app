@@ -1,17 +1,18 @@
 package com.example.api.core.recommendation;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.Value;
 
-@Value
+@Data
 @NoArgsConstructor(force = true)
 @AllArgsConstructor
 public class Recommendation {
-    int productId;
-    int recommendationId;
-    String author;
-    int rate;
-    String content;
-    String serviceAddress;
+    private int productId;
+    private int recommendationId;
+    private String author;
+    private int rate;
+    private String content;
+    private String serviceAddress;
 }
