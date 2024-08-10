@@ -49,7 +49,7 @@ public class ProductCompositeIntegration implements ProductService, Recommendati
         this.restTemplate = restTemplate;
         this.objectMapper = objectMapper;
 
-        productServiceUrl = "http://%s:%d/product/".formatted(productServiceHost, productServicePort);
+        productServiceUrl = "http://%s:%d/product".formatted(productServiceHost, productServicePort);
         recommendationServiceUrl = "http://%s:%d/recommendation?productId=".formatted(recommendationServiceHost, recommendationServicePort);
         reviewServiceUrl = "http://%s:%d/review?productId=".formatted(reviewServiceHost, reviewServicePort);
     }
@@ -76,7 +76,7 @@ public class ProductCompositeIntegration implements ProductService, Recommendati
 
     public Product getProduct(int productId) {
         try {
-            String url = productServiceUrl + productId;
+            String url =  productServiceUrl + "/" + productId;
 
             LOG.debug("Will call getProduct API on URL: {}", url);
             Product product = restTemplate.getForObject(url, Product.class);

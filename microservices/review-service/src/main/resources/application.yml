@@ -4,7 +4,7 @@ server.error.include-message: always
 spring.jpa.hibernate.ddl-auto: update
 
 spring.datasource:
-  url: jdbc:postgres://localhost/review-db
+  url: jdbc:mysql://localhost/review-db
   username: user
   password: pwd
 
@@ -23,4 +23,4 @@ spring.config.activate.on-profile: docker
 server.port: 8080
 
 spring.datasource:
-  url: jdbc:postgresql://postgresql/review-db
+  url: jdbc:mysql://mysql/review-db

@@ -14,8 +14,8 @@ public class ReviewServiceApplication {
 	public static void main(String[] args) {
 		var context = SpringApplication.run(ReviewServiceApplication.class, args);
 
-		String postgresUri = context.getEnvironment().getProperty("spring.datasource.url");
-		LOG.info("Connected to PostgreSQL: " + postgresUri);
+		String mysqlUrl = context.getEnvironment().getProperty("spring.datasource.url");
+		LOG.info("Connected to MySQL: " + mysqlUrl);
 	}
 
 }

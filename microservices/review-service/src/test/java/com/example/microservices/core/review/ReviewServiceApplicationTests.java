@@ -16,7 +16,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static reactor.core.publisher.Mono.just;
 
 @SpringBootTest(webEnvironment = RANDOM_PORT)
-class ReviewServiceApplicationTests extends PostgresTestBase {
+class ReviewServiceApplicationTests extends MySqlTestBase {
 
 	@Autowired
 	private WebTestClient client;

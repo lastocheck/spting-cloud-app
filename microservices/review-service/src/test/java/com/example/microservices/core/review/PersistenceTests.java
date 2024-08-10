@@ -21,7 +21,7 @@ import static org.springframework.transaction.annotation.Propagation.NOT_SUPPORT
 @DataJpaTest
 @Transactional(propagation = NOT_SUPPORTED)
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-public class PersistenceTests extends PostgresTestBase {
+public class PersistenceTests extends MySqlTestBase {
     @Autowired
     private ReviewRepository repository;
 
