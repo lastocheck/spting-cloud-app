@@ -7,4 +7,5 @@ public class RecommendationSummary {
     int recommendationId;
     String author;
     int rate;
+    String content;
 }

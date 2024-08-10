@@ -7,4 +7,5 @@ public class ReviewSummary {
     int reviewId;
     String author;
     String subject;
+    String content;
 }
