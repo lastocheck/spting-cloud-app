@@ -8,10 +8,9 @@ import com.example.microservices.core.review.persistence.ReviewRepository;
 import com.example.util.http.ServiceUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.dao.DuplicateKeyException;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -54,7 +53,7 @@ public class ReviewServiceImpl implements ReviewService {
             LOG.debug("createReview: created a review entity: {}/{}", body.getProductId(), body.getReviewId());
             return mapper.entityToApi(newEntity);
 
-        } catch (DuplicateKeyException dive) {
+        } catch (DataIntegrityViolationException dive) {
             throw new InvalidInputException("Duplicate key, Product Id: " + body.getProductId() + ", Review Id:" + body.getReviewId());
         }
     }

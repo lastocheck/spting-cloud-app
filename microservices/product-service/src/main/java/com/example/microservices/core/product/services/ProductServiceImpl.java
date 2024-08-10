@@ -52,7 +52,7 @@ public class ProductServiceImpl implements ProductService {
 
             return mapper.entityToApi(newEntity);
         } catch (DuplicateKeyException dke) {
-            throw new InvalidInputException("Duplicate key, Product Id: \" + body.getProductId()");
+            throw new InvalidInputException("Duplicate key, Product Id: " + body.getProductId());
         }
     }
 

@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Getter
 @Setter
 @NoArgsConstructor
-@CompoundIndex(name = "prod-rec-id", unique = true, def = "{'productId': 1, 'recommendationId: 1'}")
+@CompoundIndex(name = "prod-rec-id", unique = true, def = "{'productId': 1, 'recommendationId': 1}")
 @Document(collection = "recommendations")
 public class RecommendationEntity {
     @Id
